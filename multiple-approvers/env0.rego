@@ -7,6 +7,12 @@ pending[format(rego.metadata.rule())] {
 	count(input.approvers) < 2
 }
 
+# description: Shnitzels
+deny[format(rego.metadata.rule())] {
+	count(input.approvers) < 4
+}
+
+
 # METADATA
 # title: more than 2 approvals
 # description: allow if two or more approvals are given.
